@@ -6,9 +6,11 @@ import com.portfolio.model.loginmodel;
 import com.portfolio.service.loginservice;
 
 @RestController
-@RequestMapping("/api")
+// CORRECTED: Updated the base path to include the Tomcat context root 'springapp1'
+// to match the URL sent by the frontend application.
+@RequestMapping("/springapp1/api")
 @CrossOrigin(origins = "http://localhost:3000")
-public class LoginController {  // <-- Must match file name
+public class LoginController {
 
     @Autowired
     private loginservice loginservice;
